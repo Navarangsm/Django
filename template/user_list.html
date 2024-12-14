@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>user list</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <h1>user list</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>address</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{user.first_name}} {{user.last_name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address}}</td>
+        </tr>    
+        {% endfor %}    
+    </tr>
+    <a href="/">go back to signup </a>
+</body>
+</html>

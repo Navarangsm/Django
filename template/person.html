@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>signup</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin:0;
+            flex-direction: column;
+        }
+        form {
+            padding: 20;
+            border: 1px;
+            border-radius: 8px;
+        }
+        button {
+            margin-top: 10px;
+        } 
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="align-items: center;">Sign Up</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>
